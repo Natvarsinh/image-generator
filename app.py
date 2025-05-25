@@ -48,10 +48,7 @@ def generate_image_with_gemini(prompt_text, include_text):
                 f"'{prompt_text}'"
             )
         else:
-            if len(prompt_text.split()) <= 8:
-                context_description = f"एक दृश्य जिसमें {prompt_text} पूरी तरह से प्राकृतिक रूप से चित्रित हो। यह सिर्फ एक लेबल नहीं है, बल्कि एक पूर्ण वातावरण और दृश्य होना चाहिए। किसी भी प्रकार का पाठ या शब्द चित्र में नहीं होना चाहिए।"
-            else:
-                context_description = prompt_text
+            context_description = f"एक दृश्य जिसमें {prompt_text} पूरी तरह से प्राकृतिक रूप से चित्रित हो। यह सिर्फ एक लेबल नहीं है, बल्कि एक पूर्ण वातावरण और दृश्य होना चाहिए। किसी भी प्रकार का पाठ या शब्द चित्र में नहीं होना चाहिए।"
             
             full_prompt = (
                 f"STRICTLY GENERATE A VISUAL IMAGE. "
