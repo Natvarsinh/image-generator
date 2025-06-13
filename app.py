@@ -91,19 +91,24 @@ def generate_image_with_gemini(prompt_text, include_text, story_context, aspect_
 
             The image should be:
             - **Photorealistic**, **ultra high resolution** (8K or higher), and **correctly proportioned**.
-            - Highly detailed, with realistic skin, fabrics, lighting, and shadows.
+            - Highly detailed, with realistic lighting, shadows, materials (e.g., skin, fabric), and environment.
             - **Accurate human proportions** — avoid distorted or stretched characters.
-            - Cinematic in lighting and composition (depth of field, soft blur, etc.).
+            - **Cinematic in tone**, with natural lighting, composition, and camera depth.
             - **Well-composed group layout**: characters should be positioned naturally and spaced realistically in the frame.
             - Time of day and weather conditions should feel natural.
+            
+            ### VERY IMPORTANT:
+            - **Only include characters if they are explicitly mentioned or implied in the Hindi Scene Description.**
+            - **Do NOT add characters based solely on the story context.**
+            - If no characters are described in the scene, focus entirely on setting, mood, and environment.
 
-            Be very specific about:
+            Be very specific about(only when relevant):
             - **Characters**: age, height, posture (e.g., standing, sitting), **relative scale**, facial expressions, clothing (e.g., kurta, saree).
             - **Scene layout**: who is in the center, who is on the left/right, who is sitting or standing.
             - **Setting**: rural background, trees, charpai, tools, bull, etc.
             - **Lighting**: morning sunlight, golden hour, shadows.
             - **Mood**: sad, tense, joyful.
-            - **Camera framing**: (🛠️) suggest “medium shot” or “wide-angle”, specify full-body vs waist-up framing to avoid strange crops.
+            - **Camera angle and framing**: wide shot, medium shot, aerial view, waist-up, etc.
 
             **Story Context**:
             {story_context}
@@ -111,7 +116,7 @@ def generate_image_with_gemini(prompt_text, include_text, story_context, aspect_
             **Hindi Scene Description**:
             "{prompt_text}"
 
-            Now generate a detailed and visually rich English scene description, ensuring **correct human proportions, natural layout**, and a cinematic look.
+            Now generate a **precise and visually rich English prompt** for the image, **only including characters if mentioned**. The result must match the scene faithfully with cinematic detail and realistic layout.
         """
 
 
